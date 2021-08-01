@@ -1,0 +1,11 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+		}
+	],
+	/*"conda_environment": "/home/hja/.conda/envs/pygame",*/
+	/*"conda_environment": "/home/hja/.conda/envs/chess",*/
+	"conda_environment": "/home/hja/.conda/envs/chess",
+}

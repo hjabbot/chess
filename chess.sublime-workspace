@@ -1,0 +1,370 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sso_t",
+				"sso_tz"
+			],
+			[
+				"ast",
+				"astimezone"
+			],
+			[
+				"proces",
+				"processed_filename\tstr ⟠"
+			],
+			[
+				"tele",
+				"tele_data"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "__init__.py",
+			"settings":
+			{
+				"buffer_size": 0,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"Basic Builder"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/Conda/Conda.sublime-build",
+					""
+				],
+				[
+					"Packages/User/PyGame.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/hja/Documents/selfPrograms/Chess"
+	],
+	"file_history":
+	[
+		"/home/hja/Documents/selfPrograms/Chess/img/rename.py",
+		"/home/hja/Documents/selfPrograms/Chess/chess.sublime-workspace",
+		"/home/hja/Documents/WiFeS_Proposal/WiFeS_Proposal.tex",
+		"/home/hja/.cache/kioexec/krun/test.tex",
+		"/home/hja/.cache/kioexec/krun/4136_0/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/3834_0/reduce_red_data.py",
+		"/home/hja/.cache/kioexec/krun/61556_0/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/3634_0/save_blue_metadata.py",
+		"/home/hja/.cache/kioexec/krun/3555_0/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/7971_0/save_red_metadata.py",
+		"/home/hja/Documents/Weathermap/temp_stats.py",
+		"/home/hja/.cache/kioexec/krun/157149_0/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/152735_0/save_blue_metadata.py",
+		"/home/hja/.cache/kioexec/krun/152401_1/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/152401_0/save_blue_metadata.py",
+		"/home/hja/Documents/Weathermap/tmp/windmap_100_summer.py",
+		"/home/hja/Documents/Weathermap/tmp/windmap_001_autumn.py",
+		"/home/hja/Documents/Weathermap/windmap.py",
+		"/home/hja/Documents/Weathermap/test/fns.py",
+		"/home/hja/Documents/Weathermap/test/fns2.py",
+		"/home/hja/.cache/kioexec/krun/7205_0/fns.py",
+		"/home/hja/Documents/Weathermap/tmp/boxplots_011.py",
+		"/home/hja/Documents/Weathermap/tmp/temp_stats_001.py",
+		"/home/hja/Documents/Weathermap/tmp/temp_stats_110.py",
+		"/home/hja/Documents/Weathermap/tmp/boxplots.py",
+		"/home/hja/Documents/Weathermap/boxplots.py",
+		"/home/hja/.cache/kioexec/krun/3538_0/fns.py",
+		"/home/hja/.cache/kioexec/krun/3361_0/fns.py",
+		"/home/hja/Documents/Weathermap/data/2m3/met2m3.dat",
+		"/tmp/kite_tutorial.py"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"new_fn",
+			"old_fn",
+			"epsfig",
+			"40",
+			"30",
+			"ToO",
+			"\\deg",
+			"\\degC",
+			"\\ms",
+			"\\pm",
+			"\\rightarrow",
+			"plotBoxAndWhisker",
+			"plotBox",
+			"99.9",
+			"utc_tz"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"fn",
+			"",
+			"$\\pm$",
+			"$\\rightarrow$"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "__init__.py",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 349.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 385.0
+	},
+	"pinned_build_system": "",
+	"project": "chess.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
