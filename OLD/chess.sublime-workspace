@@ -1,0 +1,761 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"whi",
+				"white_pieces"
+			],
+			[
+				"4",
+				"40\t⟠"
+			],
+			[
+				"SQ",
+				"SQUARE_SIZE\tint ⟠"
+			],
+			[
+				"sso_t",
+				"sso_tz"
+			],
+			[
+				"ast",
+				"astimezone"
+			],
+			[
+				"proces",
+				"processed_filename\tstr ⟠"
+			],
+			[
+				"tele",
+				"tele_data"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 2351,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "\nheld"
+					},
+					"BwAAAK0DAAAAAAAArgMAAAAAAAAAAAAArgMAAAAAAACxAwAAAAAAAAAAAACxAwAAAAAAALIDAAAAAAAAAAAAALIDAAAAAAAAswMAAAAAAAAAAAAAswMAAAAAAAC0AwAAAAAAAAAAAAC0AwAAAAAAALUDAAAAAAAAAAAAALUDAAAAAAAAtgMAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAACtAwAAAAAAAK0DAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					16,
+					1,
+					"insert",
+					{
+						"characters": " ="
+					},
+					"AgAAALYDAAAAAAAAtwMAAAAAAAAAAAAAtwMAAAAAAAC4AwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAC2AwAAAAAAALYDAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					17,
+					1,
+					"insert",
+					{
+						"characters": " True"
+					},
+					"BQAAALgDAAAAAAAAuQMAAAAAAAAAAAAAuQMAAAAAAAC6AwAAAAAAAAAAAAC6AwAAAAAAALsDAAAAAAAAAAAAALsDAAAAAAAAvAMAAAAAAAAAAAAAvAMAAAAAAAC9AwAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAC4AwAAAAAAALgDAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					20,
+					1,
+					"insert",
+					{
+						"characters": "\nheld=Tru"
+					},
+					"CgAAANYBAAAAAAAA1wEAAAAAAAAAAAAA1wEAAAAAAADYAQAAAAAAAAAAAADYAQAAAAAAANkBAAAAAAAAAAAAANkBAAAAAAAA2gEAAAAAAAAAAAAA2gEAAAAAAADbAQAAAAAAAAAAAADbAQAAAAAAANwBAAAAAAAAAAAAANwBAAAAAAAA3QEAAAAAAAAAAAAA3QEAAAAAAADeAQAAAAAAAAAAAADeAQAAAAAAAN8BAAAAAAAAAAAAAN8BAAAAAAAA4AEAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADWAQAAAAAAANYBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					21,
+					1,
+					"insert",
+					{
+						"characters": "e"
+					},
+					"AQAAAOABAAAAAAAA4QEAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADgAQAAAAAAAOABAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					22,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAAN0BAAAAAAAA3QEAAAAAAAAEAAAAVHJ1ZQ",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADhAQAAAAAAAOEBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": "False"
+					},
+					"BQAAAN0BAAAAAAAA3gEAAAAAAAAAAAAA3gEAAAAAAADfAQAAAAAAAAAAAADfAQAAAAAAAOABAAAAAAAAAAAAAOABAAAAAAAA4QEAAAAAAAAAAAAA4QEAAAAAAADiAQAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADdAQAAAAAAAN0BAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAANwBAAAAAAAA3QEAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADcAQAAAAAAANwBAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					28,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAN4BAAAAAAAA3wEAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAADeAQAAAAAAAN4BAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					33,
+					1,
+					"insert",
+					{
+						"characters": "\nheld"
+					},
+					"BwAAABQFAAAAAAAAFQUAAAAAAAAAAAAAFQUAAAAAAAAZBQAAAAAAAAAAAAAZBQAAAAAAABoFAAAAAAAAAAAAABoFAAAAAAAAGwUAAAAAAAAAAAAAGwUAAAAAAAAcBQAAAAAAAAAAAAAcBQAAAAAAAB0FAAAAAAAAAAAAAB0FAAAAAAAAHgUAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAUBQAAAAAAABQFAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					34,
+					1,
+					"insert",
+					{
+						"characters": " ="
+					},
+					"AgAAAB4FAAAAAAAAHwUAAAAAAAAAAAAAHwUAAAAAAAAgBQAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAeBQAAAAAAAB4FAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					35,
+					1,
+					"insert",
+					{
+						"characters": " False"
+					},
+					"BgAAACAFAAAAAAAAIQUAAAAAAAAAAAAAIQUAAAAAAAAiBQAAAAAAAAAAAAAiBQAAAAAAACMFAAAAAAAAAAAAACMFAAAAAAAAJAUAAAAAAAAAAAAAJAUAAAAAAAAlBQAAAAAAAAAAAAAlBQAAAAAAACYFAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAgBQAAAAAAACAFAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					44,
+					1,
+					"insert",
+					{
+						"characters": " and"
+					},
+					"BAAAAGcFAAAAAAAAaAUAAAAAAAAAAAAAaAUAAAAAAABpBQAAAAAAAAAAAABpBQAAAAAAAGoFAAAAAAAAAAAAAGoFAAAAAAAAawUAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABnBQAAAAAAAGcFAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					45,
+					1,
+					"insert",
+					{
+						"characters": " held"
+					},
+					"BQAAAGsFAAAAAAAAbAUAAAAAAAAAAAAAbAUAAAAAAABtBQAAAAAAAAAAAABtBQAAAAAAAG4FAAAAAAAAAAAAAG4FAAAAAAAAbwUAAAAAAAAAAAAAbwUAAAAAAABwBQAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABrBQAAAAAAAGsFAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "  ="
+					},
+					"AwAAAHAFAAAAAAAAcQUAAAAAAAAAAAAAcQUAAAAAAAByBQAAAAAAAAAAAAByBQAAAAAAAHMFAAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABwBQAAAAAAAHAFAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					47,
+					2,
+					"left_delete",
+					null,
+					"AgAAAHIFAAAAAAAAcgUAAAAAAAABAAAAPXEFAAAAAAAAcQUAAAAAAAABAAAAIA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABzBQAAAAAAAHMFAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					48,
+					1,
+					"insert",
+					{
+						"characters": "=="
+					},
+					"AgAAAHEFAAAAAAAAcgUAAAAAAAAAAAAAcgUAAAAAAABzBQAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABxBQAAAAAAAHEFAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					49,
+					1,
+					"insert",
+					{
+						"characters": " True"
+					},
+					"BQAAAHMFAAAAAAAAdAUAAAAAAAAAAAAAdAUAAAAAAAB1BQAAAAAAAAAAAAB1BQAAAAAAAHYFAAAAAAAAAAAAAHYFAAAAAAAAdwUAAAAAAAAAAAAAdwUAAAAAAAB4BQAAAAAAAAAAAAA",
+					"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAABzBQAAAAAAAHMFAAAAAAAAAAAAAAAA8L8"
+				]
+			]
+		},
+		{
+			"file": "pieces.py",
+			"settings":
+			{
+				"buffer_size": 2731,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "constants.py",
+			"settings":
+			{
+				"buffer_size": 460,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "mouse.py",
+			"settings":
+			{
+				"buffer_size": 593,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "functions.py",
+			"settings":
+			{
+				"buffer_size": 1670,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "conversions.py",
+			"settings":
+			{
+				"buffer_size": 683,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				"Basic Builder"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/hja/Documents/selfPrograms/Chess"
+	],
+	"file_history":
+	[
+		"/home/hja/.cache/kioexec/krun/3532_0/TNSFilter.py",
+		"/home/hja/.cache/kioexec/krun/3532_1/TNSScrape_website.py",
+		"/home/hja/.cache/kioexec/krun/3532_2/TNSScraper.py",
+		"/home/hja/Documents/selfPrograms/Chess/pieces.py",
+		"/home/hja/.config/sublime-text-3/Packages/User/PyGame.sublime-build",
+		"/home/hja/Documents/Weathermap/data/dr3run.zeropoints_all.csv",
+		"/home/hja/.cache/kioexec/krun/4136_0/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/3834_0/reduce_red_data.py",
+		"/home/hja/.cache/kioexec/krun/61556_0/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/3634_0/save_blue_metadata.py",
+		"/home/hja/.cache/kioexec/krun/3555_0/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/7971_0/save_red_metadata.py",
+		"/home/hja/Documents/Weathermap/temp_stats.py",
+		"/home/hja/.cache/kioexec/krun/157149_0/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/152735_0/save_blue_metadata.py",
+		"/home/hja/.cache/kioexec/krun/152401_1/save_red_metadata.py",
+		"/home/hja/.cache/kioexec/krun/152401_0/save_blue_metadata.py",
+		"/home/hja/Documents/Weathermap/tmp/windmap_100_summer.py",
+		"/home/hja/Documents/Weathermap/tmp/windmap_001_autumn.py",
+		"/home/hja/Documents/Weathermap/windmap.py",
+		"/home/hja/Documents/Weathermap/test/fns.py",
+		"/home/hja/Documents/Weathermap/test/fns2.py",
+		"/home/hja/.cache/kioexec/krun/7205_0/fns.py",
+		"/home/hja/Documents/Weathermap/tmp/boxplots_011.py",
+		"/home/hja/Documents/Weathermap/tmp/temp_stats_001.py",
+		"/home/hja/Documents/Weathermap/tmp/temp_stats_110.py",
+		"/home/hja/Documents/Weathermap/tmp/boxplots.py",
+		"/home/hja/Documents/Weathermap/boxplots.py",
+		"/home/hja/.cache/kioexec/krun/3538_0/fns.py",
+		"/home/hja/.cache/kioexec/krun/3361_0/fns.py",
+		"/home/hja/Documents/Weathermap/data/2m3/met2m3.dat",
+		"/tmp/kite_tutorial.py"
+	],
+	"find":
+	{
+		"height": 24.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"pygame",
+			"import pygame",
+			"pygame",
+			"()\n",
+			"epsfig",
+			"40",
+			"30",
+			"ToO",
+			"\\deg",
+			"\\degC",
+			"\\ms",
+			"\\pm",
+			"\\rightarrow",
+			"plotBoxAndWhisker",
+			"plotBox",
+			"99.9",
+			"utc_tz"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"pg",
+			"",
+			"$\\pm$",
+			"$\\rightarrow$"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "main.py",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								687,
+								687
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "pieces.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2731,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23,
+								23
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "constants.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "mouse.py",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								45,
+								45
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "functions.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								240,
+								240
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "conversions.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 683,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								294,
+								294
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 169.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 385.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "chess.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
