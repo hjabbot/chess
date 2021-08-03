@@ -106,8 +106,7 @@ if __name__ == '__main__':
 	# Generates a fresh board
 	gs = engine.GameState()
 	# Generate all the valid moves initially
-	valid_moves = gs.get_possible_moves()
-	# valid_moves = gs.get_valid_moves()
+	valid_moves = gs.get_valid_moves()
 	# Flag for tracking when move is made, stops valid_moves from being calculated constantly
 	move_made = False
 	#Flag for keeping the game running
@@ -141,15 +140,21 @@ if __name__ == '__main__':
 
 				# If player selected a different square to the first 
 				if len(prev_selected) == 2:
-					print([x.moveID for x in valid_moves])
+					all_moves_english = ([x.get_chess_notation() for x in valid_moves])
+					possible_ep = [x for x in all_moves_english if x[0] != x[4]]
+					print(possible_ep)
+					# Figures out what the move selected was
 					move = engine.Move(start=prev_selected[0], end=prev_selected[1], board=gs.board)
-					print(move.moveID)
-					if move in valid_moves:
-						gs.make_move(move)
-						move_made = True
-						sq_selected = ()
-						prev_selected = []
-					else:
+					# Check if it's in list of valid moves
+					for i in range(len(valid_moves)):
+						if move == valid_moves[i]:
+							print(move.get_chess_notation())
+							gs.make_move(valid_moves[i])
+							move_made = True
+							sq_selected = ()
+							prev_selected = []
+
+					if not move_made:
 						prev_selected = [sq_selected]
 
 			# If user wants to undo
@@ -160,14 +165,22 @@ if __name__ == '__main__':
 					# Recalculate the valid moves
 					move_made = True
 		if move_made:
-			valid_moves = gs.get_possible_moves()
-			# valid_moves = gs.get_valid_moves()
+			valid_moves = gs.get_valid_moves()
+			if gs.stalemate:
+				print('Game is a DRAW')
+				break
+			elif gs.checkmate:
+				if gs.whitetomove:
+					print('Winner is BLACK')
+				else:
+					print('Winner is WHITE')
+				break
+			
 			if gs.whitetomove:
 				print("White's turn")
 			else:
 				print("Black's turn")
 			move_made = False
-
 		if sq_selected:
 			draw_gs(screen, gs, row=row, col=col)
 		else:

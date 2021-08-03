@@ -1,0 +1,6 @@
+KNOWN BUGS:
+ ✔ Pawn can capture even though it should be pinned @done (21-08-03 18:20)
+   ✔ Only happens on CAPTURING @done (21-08-03 18:20)
+
+ ✔ En Passant not working @done (21-08-03 18:42)
+ ✔ En Passant undo not working @done (21-08-03 18:52)
