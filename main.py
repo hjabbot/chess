@@ -140,9 +140,7 @@ if __name__ == '__main__':
 
 				# If player selected a different square to the first 
 				if len(prev_selected) == 2:
-					all_moves_english = ([x.get_chess_notation() for x in valid_moves])
-					possible_ep = [x for x in all_moves_english if x[0] != x[4]]
-					print(possible_ep)
+					print([x.get_chess_notation() for x in valid_moves])
 					# Figures out what the move selected was
 					move = engine.Move(start=prev_selected[0], end=prev_selected[1], board=gs.board)
 					# Check if it's in list of valid moves
@@ -150,9 +148,14 @@ if __name__ == '__main__':
 						if move == valid_moves[i]:
 							print(move.get_chess_notation())
 							gs.make_move(valid_moves[i])
-							move_made = True
+							# in_check,_,_ = gs._check4pins_checks()
+							# if in_check:
+							# 	gs.undo_move()
+							# 	print("Move not allowed: was in check(?)")
+							# else:
 							sq_selected = ()
 							prev_selected = []
+							move_made = True
 
 					if not move_made:
 						prev_selected = [sq_selected]
@@ -166,6 +169,7 @@ if __name__ == '__main__':
 					move_made = True
 		if move_made:
 			valid_moves = gs.get_valid_moves()
+			
 			if gs.stalemate:
 				print('Game is a DRAW')
 				break
