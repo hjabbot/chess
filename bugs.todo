@@ -7,8 +7,8 @@ KNOWN BUGS:
 
  ✔ Castling rights @done (21-08-03 19:42)
  ✔ Castling @done (21-08-04 00:46)
- ☐ Can castle when pawn on seconds last rank in rook column on kingside, should land in check though
-   ☐ Only affects pawn
+ ✔ Can castle when pawn on seconds last rank in rook column on kingside, should land in check though @done (21-08-04 17:49)
+   ☐ Only affects pawn @done (21-08-04 17:49)
    I think it's due to a pawns next move being forward, but attacking diagonally
    Program sees it as next move, even though it means you land in check doing it
    

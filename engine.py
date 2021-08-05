@@ -11,7 +11,7 @@ from constants import *
 class GameState:
 	def __init__(self):
 		# self.board = CHESSBOARD
-		self.board = TESTBOARD
+		self.board = np.copy(TESTBOARD)
 		self.move_functions = {	'p': self.get_pawn_moves,
 								'R': self.get_rook_moves,
 								'N': self.get_knight_moves,
@@ -105,6 +105,10 @@ class GameState:
 		else:
 			print('No more moves to undo')
 
+		# Reset these value since can't be True if undoing
+		self.stalemate = False
+		self.checkmate = False
+
 	def square_being_attacked(self, row, col, castle_into_pawn=False):
 		# Switch to opponent temporarily
 		self.whitetomove = not(self.whitetomove)
@@ -159,13 +163,13 @@ class GameState:
 			if move.end.row == DIMENSION-1:
 				if move.end.col == 0:
 					self.current_castling_rights.wqs = False
-				elif move.endCol == DIMENSION-1:
+				elif move.end.col == DIMENSION-1:
 					self.current_castling_rights.wks = False
 		elif move.piece_captured == 'bR':
 			if move.end.row == 0:
 				if move.end.col == 0:
 					self.current_castling_rights.bqs = False
-				elif move.endCol == DIMENSION-1:
+				elif move.end.col == DIMENSION-1:
 					self.current_castling_rights.bks = False
 
 
@@ -648,15 +652,11 @@ class Move:
 	cols2files = {v: k for k, v in files2cols.items()}
 
 	# subclass for easier reference to row/cols
-	class Position:
-		def __init__(self, row, col):
-			self.row = row
-			self.col = col
 
 	# Stores all info needed to make move
 	def __init__(self, start=None, end=None, board=None, is_enpassant=False, is_castle=False):
-		self.start = self.Position(start[0], start[1])
-		self.end = self.Position(end[0],end[1])
+		self.start = Position(start[0], start[1])
+		self.end = Position(end[0],end[1])
 		self.piece_moved = board[self.start.row][self.start.col]
 		self.piece_captured = board[self.end.row][self.end.col]
 		# Creates a unique ID for each possible move
@@ -706,3 +706,8 @@ class CastleRights:
 		self.wqs = wqs
 		self.bks = bks
 		self.bqs = bqs
+
+class Position:
+	def __init__(self, row, col):
+		self.row = row
+		self.col = col

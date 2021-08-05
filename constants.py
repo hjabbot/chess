@@ -31,11 +31,14 @@ def define_pos():
 	return pos_dict
 POSITION2INDEX = define_pos()
 
-BLACK        = (   0,   0,   0)
-WHITE        = ( 255, 255, 255)
-DARK_SQUARE  = ( 119, 149,  86)
-LIGHT_SQUARE = ( 235, 236, 208)
-RED_SQUARE	 = ( 188,  63,  63)
+BLACK        = 'black'
+WHITE        = 'white'
+DARK_SQUARE  = 'darkolivegreen4'
+LIGHT_SQUARE = 'beige'
+SELECTION_SQUARE = 'firebrick'
+HIGHLIGHT_SQUARE = 'indianred'
+SELECTION_ALPHA  = 225
+HIGHLIGHT_ALPHA  = 150
 
 
 BPAWN_ATTACK_DIRECTIONS = (( 1, 1), ( 1,-1))
