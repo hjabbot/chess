@@ -36,6 +36,7 @@ class GameState:
 
 		# Coordinates of square where en passant possible
 		self.enpassant_allowed = ()
+		self.enpassant_log = [self.enpassant_allowed]
 
 		# Keeps track of the right to castle
 		self.current_castling_rights = CastleRights(True, True, True, True)
@@ -55,6 +56,8 @@ class GameState:
 		self.perform_promotion(move)
 		self.perform_enpassant(move)
 		self.perform_castle(move)
+
+		self.enpassant_log.append(self.enpassant_allowed)
 
 		self.update_king_location(move)
 		self.update_castle_rights(move)
@@ -81,12 +84,10 @@ class GameState:
 				self.board[last_move.end.row, last_move.end.col] = '--'
 				# Replace taken piece with a pawn of the appropriate colour
 				self.board[last_move.start.row, last_move.end.col] = 'bp' if self.whitetomove else 'wp'
-				# Keep track of the en passant
-				self.enpassant_allowed = (last_move.end.row, last_move.end.col)
+			# Revert to previous state
+			self.enpassant_log.pop()
+			self.enpassant_allowed = self.enpassant_log[-1]
 
-			# Undo a 2 square pawn advance
-			if last_move.piece_moved[1] == 'p' and abs(last_move.start.row - last_move.end.row):
-				self.enpassant_allowed = False
 
 			# Remove newest castle rights from move we're undoing
 			self.castling_rights_log.pop()
@@ -518,7 +519,6 @@ class GameState:
 			# If pawn not pinned, or at least pinned in axis of attack
 			if not piece_pinned or (vert_move_direction, horz_move_direction) == pin_direction:
 				# Check if there's an enemy to capture there
-				print(row, col, self.enpassant_allowed)
 				if self.board[row+vert_move_direction,col+horz_move_direction][0] == enemy_colour: 
 						# Allowable move
 					moves.append(Move((row, col), (row+vert_move_direction,col+horz_move_direction), self.board))

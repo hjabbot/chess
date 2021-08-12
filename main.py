@@ -13,15 +13,16 @@ import pygame as pg
 
 from constants import *
 import engine
+import ai
 
 '''
 Draws the squares and pieces on the board
 '''
-def draw_gs(screen, gs, row=None, col=None, valid_moves=None):
+def draw_gs(screen, gs, movelog_font, row=None, col=None, valid_moves=None):
 	draw_board(screen) #Draw the squares
 	highlight_squares(screen, row, col, gs, valid_moves) #Draw the selected square
 	draw_pieces(screen, gs.board)
-	
+	draw_movelog(screen, gs, movelog_font)
 
 '''
 =====================================================================================
@@ -102,11 +103,11 @@ Draws text on screen
 def draw_text(screen, text):
 	font = pg.font.SysFont("Courier", 72, True, False)
 	text_object = font.render(text, 4, pg.Color(DARK_SQUARE))
-	text_origin = (WIDTH/2 - text_object.get_width()/2, HEIGHT/2 - text_object.get_height()/2)
-	text_location = pg.Rect(0,0, WIDTH, HEIGHT).move(text_origin[0], text_origin[1])
+	text_origin = (BOARD_WIDTH/2 - text_object.get_width()/2, BOARD_HEIGHT/2 - text_object.get_height()/2)
+	text_location = pg.Rect(0,0, BOARD_WIDTH, BOARD_HEIGHT).move(text_origin[0], text_origin[1])
 
-	backbackground = pg.Surface((WIDTH, text_object.get_height() + 10))
-	background = pg.Surface((WIDTH, text_object.get_height()))
+	backbackground = pg.Surface((BOARD_WIDTH, text_object.get_height() + 10))
+	background = pg.Surface((BOARD_WIDTH, text_object.get_height()))
 	backbackground.fill(pg.Color(BLACK))
 	background.fill(pg.Color(LIGHT_SQUARE))
 
@@ -168,6 +169,52 @@ def animate_moves(move, screen, board, clock):
 		screen.blit(IMAGES[move.piece_moved], pg.Rect(c*SQ_SIZE, r*SQ_SIZE, SQ_SIZE, SQ_SIZE))
 		pg.display.flip()
 		clock.tick(60)
+
+
+'''
+=====================================================================================
+Draws the movelog
+-------------------------------------------------------------------------------------
+'''
+def draw_movelog(screen, gs, font):
+	
+	movelog_rect = pg.Rect(BOARD_WIDTH, 0, MOVELOG_PANEL_WIDTH, MOVELOG_PANEL_HEIGHT)
+	pg.draw.rect(screen, pg.Color(BLACK), movelog_rect)
+	
+	movelog = gs.movelog
+	move_str = ""
+	move_texts = []
+	for i in range(0, len(movelog), 2):
+		move_str = "{n}. {m1} ".format(n=str(i//2+1), m1=movelog[i].get_chess_notation())
+		if i+1 < len(movelog):
+			move_str += movelog[i+1].get_chess_notation()
+		move_texts.append(move_str)
+	padding = 10
+	text_y = padding
+
+	for text in move_texts:
+		text_object = font.render(text, 4, pg.Color(WHITE))
+		text_origin = (BOARD_WIDTH/2 - text_object.get_width()/2, BOARD_HEIGHT/2 - text_object.get_height()/2)
+		text_location = movelog_rect.move(padding, text_y) 
+		screen.blit(text_object, text_location)
+		text_y += text_object.get_height() + padding
+
+	# backbackground = pg.Surface((BOARD_WIDTH, text_object.get_height() + 10))
+	# background = pg.Surface((BOARD_WIDTH, text_object.get_height()))
+	# backbackground.fill(pg.Color(BLACK))
+	# background.fill(pg.Color(LIGHT_SQUARE))
+
+	# screen.blit(backbackground, (0, text_origin[1] - 5))
+	# screen.blit(background, (0, text_origin[1]))
+
+
+
+
+
+
+
+
+
 '''
 =====================================================================================
 Main Function
@@ -177,7 +224,7 @@ if __name__ == '__main__':
 	#Initialise the game
 	pg.init()
 	#Set screen size
-	screen = pg.display.set_mode((WIDTH, HEIGHT))
+	screen = pg.display.set_mode((BOARD_WIDTH+MOVELOG_PANEL_WIDTH, BOARD_HEIGHT))
 	#Update cycle
 	clock = pg.time.Clock()
 	#Set a background
@@ -187,6 +234,8 @@ if __name__ == '__main__':
 	# Would have in constants.py but needs to be done after game initialised. 
 	global IMAGES
 	IMAGES = import_images()
+
+	movelog_font = pg.font.SysFont("Courier", 12, False, False)
 
 	# Generates a fresh board
 	gs = engine.GameState()
@@ -205,7 +254,26 @@ if __name__ == '__main__':
 	sq_selected = ()
 	# Keeps track of previously selected squares
 	prev_selected = []
+
+	# If human: 0, if AI: 1+
+	# 1 = random moves
+	# 2 = greedy moves (depth=1)
+	# 3 = greedy moves (depth=2)
+	# 4 = minmax moves (depth = DEPTH)
+	# 5 = AB pruned negamax
+	white_player = 0
+	black_player = 0
+
 	while running:
+
+		# Check if it's a human's turn
+		player = 0
+		if gs.whitetomove and white_player != 0:
+		   	player = white_player
+		elif not(gs.whitetomove) and black_player != 0:
+			player = black_player
+
+
 		# If user quits, shut game down
 		for e in pg.event.get():
 			if e.type == pg.QUIT:
@@ -214,45 +282,57 @@ if __name__ == '__main__':
 			elif e.type == pg.MOUSEBUTTONDOWN:
 				# Retrieve x,y coords of mouse
 				location = pg.mouse.get_pos()
-				col = location[0] // SQ_SIZE
-				row = location[1] // SQ_SIZE
 
-				# Deselect square if same as previously selected
-				if sq_selected == (row, col):
-					sq_selected = ()
-					prev_selected = []
-				# Otherwise select square
-				else:
-					sq_selected = (row, col)
-					prev_selected.append(sq_selected)
+				if location[0] < SQ_SIZE * DIMENSION:
 
-				if not game_over:
-					# If player selected a different square to the first 
-					if len(prev_selected) == 2:
-						print([x.get_chess_notation() for x in valid_moves])
-						# Figures out what the move selected was
-						move = engine.Move(start=prev_selected[0], end=prev_selected[1], board=gs.board)
-						# Check if it's in list of valid moves
-						for i in range(len(valid_moves)):
-							if move == valid_moves[i]:
-								# Make the move, reset variables for next turn
-								print(move.get_chess_notation())
-								gs.make_move(valid_moves[i])
-								sq_selected = ()
-								prev_selected = []
-								move_made = True
-								animate = True
+					col = location[0] // SQ_SIZE
+					row = location[1] // SQ_SIZE
 
-						if not move_made:
-							prev_selected = [sq_selected]
+					# Deselect square if same as previously selected
+					if sq_selected == (row, col):
+						sq_selected = ()
+						prev_selected = []
+					# Otherwise select square
+					else:
+						sq_selected = (row, col)
+						prev_selected.append(sq_selected)
+
+					# Only commit clicks if human's turn, or game over
+					if not game_over and player == 0:
+						# If player selected a different square to the first 
+						if len(prev_selected) == 2:
+							# print([x.get_chess_notation() for x in valid_moves])
+							# Figures out what the move selected was
+							move = engine.Move(start=prev_selected[0], end=prev_selected[1], board=gs.board)
+							# Check if it's in list of valid moves
+							for i in range(len(valid_moves)):
+								if move == valid_moves[i]:
+									# Make the move, reset variables for next turn
+									print(move.get_chess_notation())
+									gs.make_move(valid_moves[i])
+									sq_selected = ()
+									prev_selected = []
+									move_made = True
+									animate = True
+
+							if not move_made:
+								prev_selected = [sq_selected]
 
 
 			# If a keyboard shortcut pressed
 			elif e.type == pg.KEYDOWN:
 				# If user wants to undo
 				if e.key == pg.K_u:
-					# Undo the move
-					gs.undo_move()
+					# Undoes once if two human players
+					if white_player == black_player == 0:
+						# Undo the move
+						gs.undo_move()
+					# Undoes twice if one human player
+					# (Need to undo AI move as well)
+					else: 
+						gs.undo_move()
+						gs.undo_move()
+
 					# Recalculate the valid moves
 					move_made = True
 					animate = False
@@ -269,6 +349,29 @@ if __name__ == '__main__':
 					game_over = False
 		
 
+
+		# AI move finder
+		if not game_over and player > 0:
+			# If AI Difficulty 1 chosen
+			if player == 1:
+				ai_move = ai.random_move(valid_moves)
+			elif player == 2:
+				ai_move = ai.greedy_move_depth1(gs, valid_moves)
+			elif player == 3:
+				ai_move = ai.greedy_move_depth2(gs, valid_moves)
+			elif player == 4:
+				ai_move = ai.minmax_move(gs, valid_moves)
+			elif player == 5:
+				ai_move = ai.negamax_AB_move(gs, valid_moves)
+
+			if ai_move != None:
+				gs.make_move(ai_move)
+				move_made = True
+				animate = True
+			else:
+				print("No move found?")
+
+
 		if move_made:
 			if animate:
 				animate_moves( gs.movelog[-1], screen, gs.board, clock)
@@ -279,9 +382,9 @@ if __name__ == '__main__':
 			animate = False
 
 		if sq_selected:
-			draw_gs(screen, gs, row=row, col=col, valid_moves=valid_moves)
+			draw_gs(screen, gs, movelog_font, row=row, col=col, valid_moves=valid_moves)
 		else:
-			draw_gs(screen, gs)
+			draw_gs(screen, gs, movelog_font)
 
 
 		if gs.checkmate:
@@ -292,7 +395,7 @@ if __name__ == '__main__':
 				draw_text(screen, 'White Wins!')
 		elif gs.stalemate:
 			game_over = True
-			print('Stalemate')
+			draw_text(screen, 'Stalemate.')
 
 	
 			if gs.whitetomove:

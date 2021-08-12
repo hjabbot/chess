@@ -2,11 +2,14 @@ import numpy as np
 import pygame as pg
 
 
-WIDTH = HEIGHT = 512 	# Board pixel dimensions
+BOARD_WIDTH = BOARD_HEIGHT = 512 	# Board pixel dimensions
+MOVELOG_PANEL_WIDTH = 250
+MOVELOG_PANEL_HEIGHT = BOARD_HEIGHT
 DIMENSION = 8 			# Board dimensions
-SQ_SIZE = WIDTH // DIMENSION 	#Square pixel dimensions
+SQ_SIZE = BOARD_WIDTH // DIMENSION 	#Square pixel dimensions
 
 MAX_FPS = 30			# FPS for animations
+DEPTH = 3
 
 #List of all col and row names
 COLS = 'abcdefgh'
@@ -52,6 +55,21 @@ QUEEN_DIRECTIONS 		= (( 1, 0), ( 0, 1), (-1, 0), ( 0,-1), ( 1, 1), (-1, 1), ( 1,
 KING_DIRECTIONS 		= (( 1, 0), ( 0, 1), (-1, 0), ( 0,-1), ( 1, 1), (-1, 1), ( 1,-1), (-1,-1))
 
 
+# White will push to positive values
+# Black will push to negative values
+VALUES = {
+			'K': 0,
+			'Q': 8,
+			'R': 5,
+			'B': 3,
+			'N': 3,
+			'p': 1
+}
+
+CHECKMATE_VALUE = 9999
+STALEMATE_VALUE = 0
+
+
 ENPASSANTBOARD = np.array([
 			['--','--','--','--','--','--','--','--'],
 			['bp','--','--','--','--','--','--','--'],
@@ -88,5 +106,18 @@ CHESSBOARD = np.array([
 			['wR','wN','wB','wQ','wK','wB','wN','wR']
 			])
 
-# TESTBOARD = CASTLINGBOARD
+
+# Only the queen is moving for black, and next move after Bb5, queen sacrifices for no reason
+DEBUGBOARD1 = np.array([
+			['bR','bN','bB','--','bK','bB','bN','bR'],
+			['bp','bp','--','bp','bp','bp','bp','bp'],
+			['--','--','--','--','--','--','--','--'],
+			['--','--','--','--','--','--','--','--'],
+			['--','--','--','wp','bQ','wp','--','--'],
+			['--','--','--','--','--','wN','--','--'],
+			['wp','wp','wp','--','--','--','wp','wp'],
+			['wR','wN','wB','wQ','wK','wB','--','wR']
+			])
+
+# TESTBOARD = DEBUGBOARD1
 TESTBOARD = CHESSBOARD
